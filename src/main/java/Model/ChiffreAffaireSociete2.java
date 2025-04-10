@@ -5,26 +5,32 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 @Entity
-@Table(name = "chiffreaffairegrp")
+@Table(name = "chiffreaffairesociete")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ChiffreAffaireGrp {
+public class ChiffreAffaireSociete2 {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idgrp;
+    private Integer idcas;
+
+    @Temporal(TemporalType.DATE)
+    @Column(nullable = false)
+    private Date annee;
+
+    @Column(nullable = false, length = 30)
+    private String societe;
 
     @Column(nullable = false)
-    private Integer chiffreaffairegrp;
+    private Integer chiffreaffaire;
 
     @Column(nullable = false)
-    private Integer chiffreaffairesin;
+    private Integer resultattech;
 
     @Column(nullable = false)
     private Integer resultatnet;
-
-    @Column(nullable = false)
-    private Integer resulatpargrp;
 }

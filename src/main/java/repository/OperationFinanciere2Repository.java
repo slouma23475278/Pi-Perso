@@ -1,11 +1,11 @@
 package repository;
 
-import Model.BilanFinancier;
+import Model.OperationFinanciere2;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface BilanFinancierRepository extends JpaRepository<BilanFinancier, Integer> {
+public interface OperationFinanciere2Repository extends JpaRepository<OperationFinanciere2, Integer> {
 //    List<DBloc> findByNomBlocLike(String nomBloc);
 
 }

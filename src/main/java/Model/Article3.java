@@ -8,37 +8,30 @@ import lombok.NoArgsConstructor;
 import java.util.Date;
 
 @Entity
-@Table(name = "bonplan")
+@Table(name = "articles")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class BonPlan {
+public class Article3 {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idpb;
+    private Integer idart;
 
-    @Column(nullable = false, length = 30)
-    private String titrepb;
-
-    @Column(nullable = false, length = 15)
-    private String typepb;
+    @Column(nullable = false, length = 25)
+    private String titreart;
 
     @Column(nullable = false, length = 500)
-    private String descriptionpb;
+    private String desart;
 
-    @Column(nullable = false, length = 15)
-    private String statuspb;
-
-    @Lob
-    @Column(nullable = false)
-    private byte[] photopb;
+    @Column(nullable = false, length = 30)
+    private String Pseudoart;
 
     @Temporal(TemporalType.DATE)
     @Column(nullable = false)
-    private Date datedebutpb;
+    private Date datemiseajourart;
 
     @Temporal(TemporalType.DATE)
     @Column(nullable = false)
-    private Date datefinpb;
+    private Date autodateart;
 }
